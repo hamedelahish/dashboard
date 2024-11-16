@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "59efb247-5567-41f2-af1f-af4852817cbf",
+		"name": "dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23274543"
+	},
+	"item": [
+		{
+			"name": "InsertProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "categoryId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "تست",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "توضیحات",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Hamed/Pictures/Screenshots/Screenshot 2024-11-04 115639.png"
+						},
+						{
+							"key": "gallery",
+							"type": "file",
+							"src": "/C:/Users/Hamed/Pictures/Screenshots/Screenshot 2024-11-10 115202.png"
+						},
+						{
+							"key": "gallery",
+							"type": "file",
+							"src": "/C:/Users/Hamed/Pictures/Screenshots/Screenshot 2024-11-01 121346.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5130/api/products/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"products",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5130/api/products/GetProducts?pageNumber=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"products",
+						"GetProducts"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsWithFilter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5130/api/products/GetProductsWithFilter?pageNumber=1&pageSize=10&name=آشپزخانه",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"products",
+						"GetProductsWithFilter"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "name",
+							"value": "آشپزخانه"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateGallery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-MD5",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[0].GalleryId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[0].GalleryUrl",
+							"value": "test.jpg",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[0].IsMain",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[0].IsDeleted",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[1].GalleryId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[1].GalleryUrl",
+							"value": "test2.jpg",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[1].IsMain",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "galleryList[1].IsDeleted",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5130/api/galleries/UpdateGallery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"galleries",
+						"UpdateGallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[1, 2]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5130/api/products/DeleteProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"products",
+						"DeleteProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5130/api/categories/GetCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"categories",
+						"GetCategories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5130/api/products/UpdateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5130",
+					"path": [
+						"api",
+						"products",
+						"UpdateProduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

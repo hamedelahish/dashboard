@@ -1,0 +1,16 @@
+<app-product-filter
+  (showModalAddProduct)="showModalAddProduct()"
+  (onReloadProducts)="onReloadProducts()"
+  (batchDelete)="onBatchDelete()"
+  (searchProducts)="onSearch($event)"
+></app-product-filter>
+<app-product-table
+(onReloadProducts)="onReloadProducts()"
+   [products]="(products$ | async) ?? []"
+  [pagination]="pagination"
+    (onPageChange)="onPageChange($event)"
+  (productDeleted)="onDeleteProduct($event)"
+  (productsSelected)="onProductsSelected($event)"
+
+></app-product-table>
+
