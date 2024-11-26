@@ -1,18 +1,15 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { ICategory } from '../../../../shared/models/category.model';
-import { selectAllCategories } from '../../../../store/category/category.selectors';
 import { NzTreeNodeOptions } from 'ng-zorro-antd/core/tree';
-import {AppState} from "../../../../store";
 import {Overlay} from "@angular/cdk/overlay";
 import { ICategoriesResponse } from 'src/app/shared/models/global.model';
 import { CategoriesService } from 'src/app/shared/services/categories/categories.service';
+import { ICategory } from 'src/app/shared/models/category.model';
 
 @Component({
   selector: 'app-category-filter',
   templateUrl: './category-filter.component.html',
-  styleUrls: ['./category-filter.component.scss']
+  styleUrls: ['./category-filter.component.scss'],
+
 })
 export class CategoryFilterComponent implements OnInit {
   @Input() initialCategoryId: number | null = null;
@@ -46,8 +43,8 @@ export class CategoryFilterComponent implements OnInit {
        }
   }
 
-  onChange(value: string): void {
-  
+  onChange(value: string): void {``
+
     this.categorySelected.emit(+value);
   }
 

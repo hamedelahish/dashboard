@@ -8,13 +8,13 @@ import {HelpDrawerComponent} from "./help-drawer/help-drawer.component";
 
 @NgModule({
   declarations: [
-    ExploreMainDrawerComponent,
+
     HelpDrawerComponent,
     PurchaseToolbarComponent,
   ],
   imports: [CommonModule, InlineSVGModule, RouterModule],
   exports: [
-    ExploreMainDrawerComponent,
+
     HelpDrawerComponent,
     PurchaseToolbarComponent
   ],

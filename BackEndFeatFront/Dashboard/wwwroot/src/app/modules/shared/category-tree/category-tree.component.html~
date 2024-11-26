@@ -1,0 +1,12 @@
+<!-- category-tree.component.html -->
+<nz-tree
+  [nzData]="nodes"
+  nzBlockNode
+  (nzOnDrop)="onDrop($event)"
+  [nzExpandedKeys]="expandKeys"
+  [(ngModel)]="value"
+  (nzClick)="onClick($event)"
+  class="form-select-white"
+
+  >
+</nz-tree>

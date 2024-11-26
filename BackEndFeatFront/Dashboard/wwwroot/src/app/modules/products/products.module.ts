@@ -10,10 +10,9 @@ import { ProductAddComponent } from './components/modal/product-add.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NzSelectModule} from "ng-zorro-antd/select";
 import {NzTreeSelectModule} from "ng-zorro-antd/tree-select";
-import {CategoryFilterComponent} from "./components/category-filter/category-filter.component";
 import {NzPaginationModule} from "ng-zorro-antd/pagination";
-import {OverlayContainer, OverlayModule} from "@angular/cdk/overlay";
-
+import { OverlayModule} from "@angular/cdk/overlay";
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -24,7 +23,6 @@ import {OverlayContainer, OverlayModule} from "@angular/cdk/overlay";
     ProductTableComponent,
     ProductFilterComponent,
     ProductAddComponent,
-    CategoryFilterComponent
 
   ],
   imports: [
@@ -38,6 +36,7 @@ import {OverlayContainer, OverlayModule} from "@angular/cdk/overlay";
     FormsModule,
     NzTreeSelectModule,
     NzPaginationModule,
+    SharedModule
 
   ],
 

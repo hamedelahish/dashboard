@@ -1,4 +1,4 @@
-import {NgModule, APP_INITIALIZER} from '@angular/core';
+import {NgModule, APP_INITIALIZER, ModuleWithProviders} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
@@ -15,9 +15,6 @@ import {FakeAPIService} from './_fake';
 import {Store, StoreModule} from '@ngrx/store';
 import {productReducer} from "./store/product/product.reducer";
 import {categoryReducer} from "./store/category/category.reducer";
-import {initialCategories, initialProducts} from "./initialData";
-import {addProduct} from "./store/product/product.actions";
-import {addCategory} from "./store/category/category.actions";
 import {AppState} from "./store";
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {NZ_I18N} from 'ng-zorro-antd/i18n';
@@ -26,6 +23,8 @@ import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
 import {FormsModule} from '@angular/forms';
 import { OverlayModule} from "@angular/cdk/overlay";
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -72,7 +71,7 @@ function appInitializer(authService: AuthService, store: Store<AppState>) {
       logOnly: environment.production,
     }),
     FormsModule,
-
+    ToastrModule.forRoot() as ModuleWithProviders<ToastrModule>,
   ],
   providers: [
 

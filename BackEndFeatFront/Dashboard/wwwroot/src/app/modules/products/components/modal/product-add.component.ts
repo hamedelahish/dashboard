@@ -32,7 +32,6 @@ export class ProductAddComponent implements OnInit {
   productImagePreview: string | ArrayBuffer | null = null;
   galleryImagesPreview: string[] = [];
   isEditMode: boolean = false;
-  galleryResponseList: IGalleryResponseItem[] = [];
   galleryUpdateList: IGalleryUpdateDto[] = [];
 
   productForm = new FormGroup({
@@ -80,7 +79,7 @@ export class ProductAddComponent implements OnInit {
 
         this.productService.updateProduct(formData).subscribe({
           next: () => {
-            // if product image and gallries is file then add to insert list
+
             if (product.image instanceof File) {
               this.galleryUpdateList.push({
                 productId: this.data.product.productId,
@@ -275,7 +274,7 @@ export class ProductAddComponent implements OnInit {
 
 
   loadProduct(product: IProductResponseItem) {
-   
+
     this.productForm.patchValue({
       categoryId: product.categoryId,
       name: product.name,
