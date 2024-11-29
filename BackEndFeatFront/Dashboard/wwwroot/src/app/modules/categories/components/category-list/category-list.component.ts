@@ -4,6 +4,8 @@ import {ICategorySelection} from "../../../../shared/models/category.model";
 import {CategoriesService} from "../../../../shared/services/categories/categories.service";
 import {CategoryTreeComponent} from "../../../shared/category-tree/category-tree.component";
 import {ToastService} from '../../../shared/service/toast/toast.service';
+import {treeCollapseMotion} from "ng-zorro-antd/core/animation";
+import {NzFormatEmitEvent} from "ng-zorro-antd/core/tree";
 
 @Component({
   selector: 'app-category-list',
@@ -12,13 +14,13 @@ import {ToastService} from '../../../shared/service/toast/toast.service';
 })
 export class CategoryListComponent implements OnInit {
   @ViewChild('categoryTreeComponent') categoryTreeComponent!: CategoryTreeComponent;
-
   @Output() categorySelected = new EventEmitter<number>();
 
   typeForm: FormGroup;
   insertCategoryForm: FormGroup;
   editCategoryForm: FormGroup;
   selectedCategoryId: number | null = null;
+  isDraggable:boolean=false
 
 
   constructor(private fb: FormBuilder, private categoriesService: CategoriesService, private toastService: ToastService) {
@@ -43,6 +45,7 @@ export class CategoryListComponent implements OnInit {
     this.typeForm.get('selectTypeForm')?.valueChanges.subscribe((value) => {
       this.categoryTreeComponent.clearValue();
       this.clearTreeSelection()
+      this.isDraggable = value === 'edit_category';
     });
   }
 
@@ -81,8 +84,19 @@ export class CategoryListComponent implements OnInit {
           this.toastService.showToast('دسته بندی با موفقیت انجام شد', 'افزودن', 'success')
         },
         error: (error) => {
-          console.error('Error inserting category:', error);
-          this.toastService.showToast('ایجاد دسته بندی با خطا مواجه شد', 'افزودن', 'error')
+
+            if(error.status===400){
+              if(error.error.message){
+                this.toastService.showToast(error.error.message, 'افزودن','error')
+
+              }
+            }
+            else{
+
+              this.toastService.showToast('ایجاد دسته بندی با خطا مواجه شد', 'افزودن', 'error')
+            }
+
+
         }
 
       })
@@ -173,4 +187,15 @@ export class CategoryListComponent implements OnInit {
     }
 
   }
+
+  toggleDraggable(value:boolean) {
+    this.isDraggable=value
+  }
+
+  onDrop(event: NzFormatEmitEvent): void {
+    console.log('onDrop Parent ')
+    this.isDraggable=false
+  }
+
+  protected readonly treeCollapseMotion = treeCollapseMotion;
 }

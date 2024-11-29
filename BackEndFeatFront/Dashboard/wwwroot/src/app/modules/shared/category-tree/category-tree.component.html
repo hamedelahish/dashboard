@@ -1,5 +1,6 @@
-<!-- category-tree.component.html -->
+
 <nz-tree
+  nzShowLine
   [nzData]="nodes"
   nzBlockNode
   (nzOnDrop)="onDrop($event)"
@@ -8,6 +9,7 @@
   [nzSelectedKeys]="selectedKeys"
   (nzClick)="onClick($event)"
   class="form-select-white"
+  [nzDraggable]="nzDraggable"
 
   >
 </nz-tree>

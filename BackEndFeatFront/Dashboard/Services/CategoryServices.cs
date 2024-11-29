@@ -1,6 +1,7 @@
 using Dashboard.DTOs;
 using Dashboard.Models;
 using Dashboard.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Dashboard.Services
 {
@@ -30,6 +31,11 @@ namespace Dashboard.Services
         public async Task<string> RemoveCategory(int categoryId)
         {
             return await _categoryRepository.RemoveCategory(categoryId);
+        }
+
+        public async Task<bool> UpdateCategoriesOrder( List<CategoryOrderDto> categories)
+        {
+            return await _categoryRepository.UpdateCategoriesOrder(categories);
         }
     }
 

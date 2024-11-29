@@ -43,5 +43,15 @@ export class CategoriesService {
       { headers }
     );
   }
+
+  UpdateCategoriesOrder(categoryData: any[]): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>(
+      `${environment.baseUrl}${this.model}/UpdateCategoriesOrder`,
+      JSON.stringify(categoryData),
+      { headers }
+    );
+  }
+
 }
 

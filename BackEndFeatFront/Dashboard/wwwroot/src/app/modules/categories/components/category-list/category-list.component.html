@@ -19,7 +19,7 @@
               <span class="text-dark fw-bolder d-block fs-4 mb-2"
               >افزودن دسته بندی</span
               >
-              <span class="text-gray-400 fw-bold fs-6">
+              <span style="font-size: 1rem" class="text-gray-400 fw-bold ">
                 جهت افزودن دسته بندی جدید این بخش را انتخاب نمایید
               </span>
             </span>
@@ -43,8 +43,8 @@
               <span class="text-dark fw-bolder d-block fs-4 mb-2"
               >ویرایش دسته بندی
               </span>
-              <span class="text-gray-400 fw-bold fs-6">
-                جهت ویرایش و حذف بندی این بخش را انتخاب نمایید
+              <span style="font-size: 1rem" class="text-gray-400 fw-bold ">
+                جهت ویرایش و حذف بندی و تغییر ترتیب این بخش را انتخاب نمایید
               </span>
             </span>
           </label>
@@ -53,9 +53,18 @@
       <div class="row">
         <div class="col-md-6">
           <app-category-tree
+            (nzDrop)="onDrop($event)"
+            [nzDraggable]="isDraggable"
             (categorySelected)="onCategorySelected($event)"
             #categoryTreeComponent
           ></app-category-tree>
+
+          <div *ngIf="(categoryTreeComponent?.updatedCategories ?? []).length > 0">
+            <button type="button" class="btn btn-sm btn-primary" (click)="categoryTreeComponent.saveCategoryOrderChanges()">اعمال تغییرات</button>
+            <button type="button" class="btn btn-sm btn-secondary ms-2 " (click)="categoryTreeComponent.loadCategories();toggleDraggable(true)">
+              انصراف
+            </button>
+          </div>
         </div>
         <div class="col-md-6">
           <form
@@ -101,7 +110,7 @@
                 id="description"
                 formControlName="description"
                 rows="3"
-                placeholder=""
+                placeholder=""ویا
               ></textarea>
             </div>
             <button type="submit" class="btn btn-sm btn-primary">افزودن دسته بندی</button>
@@ -147,8 +156,8 @@
                   placeholder=""
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-sm btn-primary">ویرایش دسته بندی</button>
-              <a (click)="onRemove()"  class="btn btn-sm btn-danger cursor-pointer ms-2" id="remove_product_button">حذف </a>
+              <button [disabled]="categoryTreeComponent.updatedCategories.length>0"  type="submit" class="btn btn-sm btn-primary">ویرایش دسته بندی</button>
+              <button    [disabled]="categoryTreeComponent.updatedCategories.length>0" (click)="onRemove()"  class="btn btn-sm btn-danger cursor-pointer ms-2" id="remove_product_button">حذف </button>
               <button type="button" class="btn btn-sm btn-secondary ms-2 " (click)="onResetEdit()">
                 بازنویسی
               </button>

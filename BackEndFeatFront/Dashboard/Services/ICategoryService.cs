@@ -1,5 +1,6 @@
 using Dashboard.DTOs;
 using Dashboard.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Dashboard.Services
 {
@@ -9,6 +10,7 @@ namespace Dashboard.Services
         Task<Category> InsertCategory(CategoryDto categoryDto);
         Task<Category> UpdateCategory(CategoryDto categoryDto);
         Task<string> RemoveCategory(int categoryId);
+        Task<bool> UpdateCategoriesOrder(List<CategoryOrderDto> categories);
     }
 
 }

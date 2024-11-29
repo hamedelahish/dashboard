@@ -28,6 +28,11 @@
         "IsRequired": false
       },
       {
+        "Name": "CategoryOrder",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
         "Name": "Name",
         "Type": "System.String",
         "IsRequired": false
@@ -73,6 +78,22 @@
   },
   {
     "ContainingType": "Dashboard.Controllers.CategoriesController",
+    "Method": "UpdateCategoriesOrder",
+    "RelativePath": "api/Categories/UpdateCategoriesOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categories",
+        "Type": "System.Collections.Generic.List\u00601[[Dashboard.DTOs.CategoryOrderDto, Dashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Dashboard.Controllers.CategoriesController",
     "Method": "UpdateCategory",
     "RelativePath": "api/Categories/UpdateCategory",
     "HttpMethod": "POST",
@@ -86,6 +107,11 @@
       },
       {
         "Name": "CategoryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryOrder",
         "Type": "System.Int32",
         "IsRequired": false
       },

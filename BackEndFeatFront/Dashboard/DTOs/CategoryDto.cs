@@ -4,6 +4,7 @@
     {
         public int? ParentId { get; set; }
         public int CategoryId { get; set; }
+        public int CategoryOrder { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool IsDeleted { get; set; }

@@ -1,4 +1,4 @@
-using Dashboard.DTOs;
+﻿using Dashboard.DTOs;
 using Dashboard.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -22,12 +22,24 @@ namespace Dashboard.Controllers
             var categories = await _categoryService.GetCategories();
             return Ok(categories);
         }
-
         [HttpPost("InsertCategory")]
         public async Task<IActionResult> InsertCategory([FromForm] CategoryDto categoryDto)
         {
-            var result = await _categoryService.InsertCategory(categoryDto);
-            return Ok(result);
+            try
+            {
+                var result = await _categoryService.InsertCategory(categoryDto);
+                return Ok(result); 
+            }
+            catch (InvalidOperationException ex)
+            {
+             
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+               
+                return StatusCode(500, new { message = "خطا در ایجاد دسته بندی "});
+            }
         }
 
 
@@ -56,6 +68,18 @@ namespace Dashboard.Controllers
                 
                 return StatusCode(500, new { error = "An unexpected database error occurred.", details = ex.Message });
             }
+        }
+
+        [HttpPost("UpdateCategoriesOrder")]
+        public async Task<IActionResult> UpdateCategoriesOrder([FromBody] List<CategoryOrderDto> categories)
+        {
+            if (categories == null || categories.Count == 0)
+            {
+                return BadRequest("دسته بندی جهت ویرایش وجود ندارد");
+            }
+
+            var result = await _categoryService.UpdateCategoriesOrder(categories);
+            return result ? Ok("ترتیب دسته بندی با موفقیت ویرایش شد") : BadRequest("خطا در ویرایش ترتیب دسته بندی");
         }
 
     }

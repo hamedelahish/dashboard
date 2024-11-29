@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pM+9UVDY3MtMN9fWYmPrHRoGEqpIMkv0KUYbM9bz9MY=",
+  "Hash": "nGGQ/XyMAMCII5ivFIhJcf96Emqy6lkXDrHSg28k9Gs=",
   "Source": "Dashboard",
   "BasePath": "_content/Dashboard",
   "Mode": "Default",
@@ -8109,25 +8109,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\app\\modules\\shared\\category-tree\\category-tree.component.html"
-    },
-    {
-      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\shared\\category-tree\\category-tree.component.html~",
-      "SourceId": "Dashboard",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
-      "BasePath": "_content/Dashboard",
-      "RelativePath": "src/app/modules/shared/category-tree/category-tree.component.html~",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\shared\\category-tree\\category-tree.component.html~"
     },
     {
       "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\shared\\category-tree\\category-tree.component.scss",

@@ -21,10 +21,11 @@ export interface IProductResponse {
 
 
 export interface ICategoriesResponse {
-  id: number
-  name: string
-  parentId: any
-  children: ICategoriesResponse[]
+  id: number;
+  name: string;
+  parentId: number;
+  categoryOrder:number;
+  children: ICategoriesResponse[];
 }
 
 

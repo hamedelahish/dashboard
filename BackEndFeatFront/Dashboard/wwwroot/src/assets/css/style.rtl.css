@@ -58720,7 +58720,21 @@ body {
   border: 1px solid red;
 }
 nz-tree {
-  height: 300px;
+  border:none;
+  height: 280px;
   overflow: auto;
   background: #fff;
+}
+/* If nzDraggable is false, disable any dragging styles */
+:host-context(.no-dragging) .ant-tree-treenode.dragging {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* When nzDraggable is true, reset dragging styles to default */
+:host-context(.draggable) .ant-tree-treenode.dragging {
+  background: #1890ff !important; /* Default drag highlight */
+  border: 2px solid #1890ff !important;
+  box-shadow: 0 0 8px rgba(24, 144, 255, 0.4) !important;
 }
