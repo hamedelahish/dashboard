@@ -19,7 +19,7 @@ namespace Dashboard.Repositories
         }
 
 
-        public async Task<IEnumerable<OrderDto>> GetOrders(OrderQueryParameters queryParam)
+        public async Task<PagedResult<OrderDto>> GetOrders(OrderQueryParameters queryParam)
         {
             using (var connection = _context.CreateConnection())
             {
@@ -32,15 +32,22 @@ namespace Dashboard.Repositories
                 parameters.Add("StatusName", queryParam.StatusName, DbType.String);
                 parameters.Add("CustomerName", queryParam.CustomerName, DbType.String);
 
-                var orders = await connection.QueryAsync<OrderDto>(
-                    query,
-                    parameters,
-                    commandType: CommandType.StoredProcedure
-                );
+                using (var multi = await connection.QueryMultipleAsync(query, parameters, commandType: CommandType.StoredProcedure))
+                {
+                    var pagedResult = new PagedResult<OrderDto>
+                    {
+                        PageNumber = queryParam.PageNumber,
+                        PageSize = queryParam.PageSize,
+                        Total = multi.ReadSingle<int>(),
+                        Items = multi.Read<OrderDto>().ToList(),
 
-                return orders;
+                    };
+
+                    return pagedResult;
+                }
             }
         }
+
         public async Task<OrderDetailsDto> GetOrderDetails(int orderId)
         {
             using (var connection = _context.CreateConnection())

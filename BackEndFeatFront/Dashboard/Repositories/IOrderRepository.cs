@@ -5,7 +5,7 @@ namespace Dashboard.Repositories
 {
     public interface IOrdersRepository
     {
-        Task<IEnumerable<OrderDto>> GetOrders(OrderQueryParameters query);
+        Task<PagedResult<OrderDto>> GetOrders(OrderQueryParameters queryParam);
         Task<OrderDetailsDto> GetOrderDetails(int orderId);
         Task<bool> UpdateOrderStatus(int orderId, int statusId);
     }

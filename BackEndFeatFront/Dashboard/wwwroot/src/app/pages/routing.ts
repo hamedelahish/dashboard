@@ -17,6 +17,11 @@ const Routing: Routes = [
       import('../modules/categories/categories.module').then((m) => m.CategoriesModule),
   },
   {
+    path: 'orders/list',
+    loadChildren: () =>
+      import('../modules/orders/orders.module').then((m) => m.OrdersModule),
+  },
+  {
     path: 'builder',
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),

@@ -91,7 +91,7 @@ namespace Dashboard.Repositories
           Items = new List<ProductWithDetailsDto>()
         };
 
-        using (var multi = await connection.QueryMultipleAsync(query, parameters, commandType: CommandType.StoredProcedure))
+        using ( var multi = await connection.QueryMultipleAsync(query, parameters, commandType: CommandType.StoredProcedure))
         {
           var products = multi.Read<ProductWithDetailsDto, GalleryListDto, ProductWithDetailsDto>(
               (product, gallery) =>

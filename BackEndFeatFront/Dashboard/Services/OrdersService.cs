@@ -15,7 +15,7 @@ namespace Dashboard.Services
         }
 
 
-        public async Task<IEnumerable<OrderDto>> GetOrders(OrderQueryParameters queryParam)
+        public async Task<PagedResult<OrderDto>> GetOrders(OrderQueryParameters queryParam)
         { return await _ordersRepository.GetOrders(queryParam); 
         }
 

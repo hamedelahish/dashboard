@@ -1,0 +1,12 @@
+<app-orders-filter
+  (showModalAddProduct)="showModalAddProduct()"
+  (onReloadProducts)="onReloadOrders()"
+  (searchProducts)="onSearch($event)"
+></app-orders-filter>
+<app-orders-table
+  (onReloadProducts)="onReloadOrders()"
+  [orders]="(orders$ | async) ?? []"
+  [pagination]="pagination"
+  (onPageChange)="onPageChange($event)"
+
+></app-orders-table>

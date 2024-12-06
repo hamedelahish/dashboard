@@ -1549,6 +1549,78 @@
       "PackagePath": "staticwebassets\\src\\app\\modules\\i18n\\vocabs\\jp.ts"
     },
     {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.spec.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.spec.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.spec.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.spec.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.spec.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.spec.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-list\\orders-list.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.spec.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.spec.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\components\\orders-table\\orders-table.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\orders-routing.module.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\orders-routing.module.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\orders.module.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\orders\\orders.module.ts"
+    },
+    {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\products\\components\\modal\\product-add.component.html",
       "PackagePath": "staticwebassets\\src\\app\\modules\\products\\components\\modal\\product-add.component.html"
     },
@@ -1933,6 +2005,10 @@
       "PackagePath": "staticwebassets\\src\\app\\shared\\models\\global.model.ts"
     },
     {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\models\\order.model.ts",
+      "PackagePath": "staticwebassets\\src\\app\\shared\\models\\order.model.ts"
+    },
+    {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\models\\product.model.ts",
       "PackagePath": "staticwebassets\\src\\app\\shared\\models\\product.model.ts"
     },
@@ -1951,6 +2027,14 @@
     {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\galleries\\galleries.service.ts",
       "PackagePath": "staticwebassets\\src\\app\\shared\\services\\galleries\\galleries.service.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\orders\\orders.service.spec.ts",
+      "PackagePath": "staticwebassets\\src\\app\\shared\\services\\orders\\orders.service.spec.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\orders\\orders.service.ts",
+      "PackagePath": "staticwebassets\\src\\app\\shared\\services\\orders\\orders.service.ts"
     },
     {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\products\\products.service.spec.ts",
