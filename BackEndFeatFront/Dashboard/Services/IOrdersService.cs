@@ -10,6 +10,8 @@ namespace Dashboard.Services
         Task<OrderDetailsDto> GetOrderDetails(int orderId);
 
         Task<bool> UpdateOrderStatus(int orderId, int statusId);
-    }
+
+        Task<IEnumerable<OrderStatus>> GetOrderStatuses();
+     }
 
 }

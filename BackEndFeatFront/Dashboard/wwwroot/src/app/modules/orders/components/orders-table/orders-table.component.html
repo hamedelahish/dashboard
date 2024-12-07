@@ -21,20 +21,17 @@
           <tbody>
           <ng-container *ngIf="orders">
             <tr *ngFor="let order of orders;let i=index">
-              <!-- <td class="text-center">
-                <div class="form-check form-check-sm form-check-custom form-check-solid">
-                  <input class="form-check-input widget-13-check" type="checkbox" (change)="toggleSelection(product.productId)" [checked]="selectedProducts.has(product.productId)" />
-                </div>
-              </td> -->
+           
               <td class="text-center"><span>{{ (pagination.currentPage - 1) * pagination.pageSize + i + 1 }}</span></td>
               <td class="text-center"><span class="text-dark fw-bolder text-muted d-block fs-7">{{ order.orderId }}</span></td>
               <td class="text-center"><span class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">{{ order.customerName }}</span></td>
               <td class="text-center"><span class="text-muted fw-bold text-muted d-block fs-7">{{ order.orderStatus }}</span></td>
               <td class="text-dark fw-bolder text-center text-hover-primary fs-6">{{  convertToPersianDate(order.orderDate) }}</td>
               <td class="text-center">
-                <!-- <a   (click)="openModalEditProduct(order)" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
-                  <span [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'" class="svg-icon svg-icon-3"></span>
-                </a> -->
+                <a   (click)="openModalEditProduct(order)" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                 
+                  <span [inlineSVG]="'./assets/media/icons/duotune/general/gen005.svg'" class="svg-icon svg-icon-3"></span>
+                </a>
               
               </td>
             </tr>

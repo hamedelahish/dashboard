@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import * as moment from 'jalali-moment';
 
 @Component({
   selector: 'app-orders-filter',
@@ -7,20 +8,24 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./orders-filter.component.scss'],
 })
 export class OrdersFilterComponent implements OnInit {
-  @Output() showModalAddProduct = new EventEmitter();
+  @Output() showModalDetails = new EventEmitter();
   @Output() batchDelete = new EventEmitter<void>();
   @Output() searchProducts = new EventEmitter<any>();
   selectedCategory: number | null = null;
   searchForm: FormGroup;
   showFilterSection: boolean = false;
+  startDate = new FormControl('');
+  endDate = new FormControl('');
+  
 
   constructor(private fb: FormBuilder) {
     this.searchForm = this.fb.group({
-      searchText: [''],
-      categoryId: [null],
-      priceFrom: [null],
-      priceTo: [null],
-      stock: [null],
+      customerName: [''],
+      startDate: [''],
+      endDate: [''],
+      statusName: [''],
+   
+    
     });
   }
 
@@ -43,8 +48,8 @@ export class OrdersFilterComponent implements OnInit {
     this.showFilterSection = !this.showFilterSection;
   }
 
-  onShowModalAddProduct() {
-    this.showModalAddProduct.emit();
+  onShowModalDetails() {
+    this.showModalDetails.emit();
   }
 
   setDateReturn(e: any) {

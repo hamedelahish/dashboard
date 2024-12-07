@@ -1,16 +1,17 @@
 <div class="card mb-10">
-  <div class="card-body  ">
+  <div class="card-body">
     <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
       <div class="row justify-content-between mb-3">
-
         <div class="col-md-5 order-2 order-md-1">
           <div class="d-flex align-items-center gap-2">
             <label class="col-form-label fw-bold fs-6">جستجو</label>
             <div class="d-flex align-items-center position-relative me-4">
-              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen021.svg'"
-                    class="svg-icon svg-icon-3 position-absolute ms-3"></span>
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/general/gen021.svg'"
+                class="svg-icon svg-icon-3 position-absolute ms-3"
+              ></span>
               <input
-                formControlName="searchText"
+                formControlName="customerName"
                 type="text"
                 id="kt_filter_search"
                 class="form-control form-control-white form-control-sm w-200px ps-9"
@@ -22,53 +23,73 @@
 
         <div class="col-md-7 order-1 order-md-2 mb-5">
           <div class="d-flex align-items-start justify-content-end gap-4">
-            <button type="submit" class="btn btn-sm btn-primary cursor-pointer" id="kt_button_search">جستجو</button>
-            <!-- <a (click)="onShowModalAddProduct()" class="btn btn-sm btn-primary cursor-pointer" id="kt_toolbar_primary_button">افزودن</a> -->
-            <!-- <a (click)="triggerBatchDelete()" class="btn btn-sm btn-danger cursor-pointer" id="remove_product_button">حذف گروهی</a> -->
-            <a class="btn btn-sm btn-flex btn-light btn-active-primary fw-bolder cursor-pointer"  (click)="toggleFilterSection()" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
-              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen031.svg'" class="svg-icon svg-icon-5 svg-icon-gray-500 me-1"></span>
+            <button
+              type="submit"
+              class="btn btn-sm btn-primary cursor-pointer"
+              id="kt_button_search"
+            >
+              جستجو
+            </button>
+            <a
+              class="btn btn-sm btn-flex btn-light btn-active-primary fw-bolder cursor-pointer"
+              (click)="toggleFilterSection()"
+              data-kt-menu-placement="bottom-end"
+              data-kt-menu-flip="top-end"
+            >
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/general/gen031.svg'"
+                class="svg-icon svg-icon-5 svg-icon-gray-500 me-1"
+              ></span>
               فیلتر
             </a>
           </div>
         </div>
-
       </div>
 
-      <div *ngIf="showFilterSection" class="row justify-content-center align-items-center mb-6">
-        <div class="col-md-5">
-          <div class="d-flex align-items-center">
-            <label class="col-form-label fw-bold fs-6 w-85px">دسته بندی</label>
-            <div class="w-100 ms-2  ">
-              <app-category-filter (categorySelected)="onCategorySelected($event)"></app-category-filter>
-            </div>
+      <div
+        *ngIf="showFilterSection"
+        class="row justify-content-start align-items-center mb-6"
+      >
+        <div class="col-md-6">
+          <div class="d-flex align-items-center f gap-2">
+            <label class="col-form-label fw-bold fs-6">از تاریخ</label>
+
+            <ng-persian-datepicker [dateInitValue]="false">
+              <input
+              formControlName="startDate"
+                class="form-control form-control-white form-control-sm"
+                type="text"
+                [formControl]="startDate"
+              />
+            </ng-persian-datepicker>
+
+            <label class="col-form-label fw-bold fs-6">تا تاریخ</label>
+
+            <ng-persian-datepicker [dateInitValue]="false">
+              <input
+                formControlName="endDate"
+                class="form-control form-control-white form-control-sm"
+                type="text"
+                [formControl]="endDate"
+              />
+            </ng-persian-datepicker>
           </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="d-flex align-items-center gap-2">
-            <label class="col-form-label fw-bold fs-6">قیمت</label>
-        
-            
-            <input
-              formControlName="priceTo"
-              type="number"
-              id="kt_filter_price_second"
-              class="form-control form-control-white form-control-sm"
-              placeholder="تا قیمت"
-            />
-          </div>
-        </div>
-
-        <div class="col-md-2">
-          <div class="d-flex align-items-center gap-2">
-            <label class="col-form-label fw-bold fs-6">موجودی</label>
-            <input
-              formControlName="stock"
-              type="number"
-              id="kt_filter_product_stock"
-              class="form-control form-control-white form-control-sm"
-              placeholder="تعداد"
-            />
+            <label style="width: 10rem" class="col-form-label fw-bold fs-6 ">وضعیت سفارش</label>
+            <select
+            formControlName="statusName"
+            class="form-select form-select-lg"
+            name="currency"
+          >
+            <option value="">انتخاب وضعیت سفارش</option>
+            <option value="در حال پردازش">در حال پردازش</option>
+            <option value="تحویل شده">تحویل شده</option>
+            <option value="لغو شده">لغو شده</option>
+      
+          </select>
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ namespace Dashboard.Controllers
             return Ok(orderDetails);
         }
 
-        [HttpPut("GetOrdersWithDetail")]
+        [HttpPut("UpdateOrderStatus")]
         public async Task<IActionResult> UpdateOrderStatus([FromQuery] int orderId, [FromQuery] int statusId)
         {
             var result = await _ordersService.UpdateOrderStatus(orderId, statusId);
@@ -43,6 +43,13 @@ namespace Dashboard.Controllers
             }
 
             return Ok("وضعیت سفارش با موفقیت ویرایش شد");
+        }
+
+        [HttpGet("GetOrderStatuses")]
+        public async Task<IActionResult> GetOrderStatuses()
+        {
+            var orderStatuses = await _ordersService.GetOrderStatuses();
+            return Ok(orderStatuses);
         }
 
     }

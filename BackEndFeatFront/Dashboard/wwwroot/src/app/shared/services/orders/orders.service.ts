@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IOrdersResponse, IProductResponse, ISearchOrderParams } from '../../models/global.model';
-import { IOrderResponseItem } from '../../models/order.model';
+import { IOrderResponse, IOrderResponseDetail, IOrderResponseItem } from '../../models/order.model';
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +13,24 @@ export class OrdersService {
   constructor(private http: HttpClient) {}
 
 
+  getOrderDetails(orderId: number): Observable<IOrderResponseDetail> {
+    return this.http.get<IOrderResponseDetail>(
+      `${environment.baseUrl}${this.model}/GetOrdersWithDetail?orderId=${orderId}`
+    );
+  }
+  getOrderStatus(): Observable<IOrderResponse[]> {
+    return this.http.get<IOrderResponse[]>(
+      `${environment.baseUrl}${this.model}/GetOrderStatuses`
+    );
+  }
+  updateOrderStatus(orderId: number, statusId: number): Observable<string> {
+    return this.http.put(
+      `${environment.baseUrl}${this.model}/UpdateOrderStatus?orderId=${orderId}&statusId=${statusId}`,
+      {}, 
+      { responseType: 'text' }
+    );
+  }
   
-
   getOrdersWithFilter(
     filterParameters: ISearchOrderParams
   ): Observable<IOrdersResponse> {

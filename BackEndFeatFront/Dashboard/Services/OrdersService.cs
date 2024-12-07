@@ -26,6 +26,10 @@ namespace Dashboard.Services
         { return await _ordersRepository.UpdateOrderStatus(orderId, statusId);
         }
 
+        public async Task<IEnumerable<OrderStatus>> GetOrderStatuses()
+        {
+            return await _ordersRepository.GetOrderStatuses();
+        }
     }
 
 }

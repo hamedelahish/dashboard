@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J3KLBWGCeKfFZLJsT0yyEVvckt43c7VR6cyUSwolGxM=",
+  "Hash": "3TR/BlU8T+wyKXGAZVUDJIXK9sHG8V75Zscc5CUP/Ps=",
   "Source": "Dashboard",
   "BasePath": "_content/Dashboard",
   "Mode": "Default",
@@ -7370,12 +7370,12 @@
       "OriginalItemSpec": "wwwroot\\src\\app\\modules\\i18n\\vocabs\\jp.ts"
     },
     {
-      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.html",
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.html",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "src/app/modules/orders/components/modal/orders-add.component.html",
+      "RelativePath": "src/app/modules/orders/components/modal/orders-detail.component.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7386,15 +7386,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.html"
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.html"
     },
     {
-      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.scss",
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.scss",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "src/app/modules/orders/components/modal/orders-add.component.scss",
+      "RelativePath": "src/app/modules/orders/components/modal/orders-detail.component.scss",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7405,15 +7405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.scss"
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.scss"
     },
     {
-      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.spec.ts",
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.spec.ts",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "src/app/modules/orders/components/modal/orders-add.component.spec.ts",
+      "RelativePath": "src/app/modules/orders/components/modal/orders-detail.component.spec.ts",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7424,15 +7424,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.spec.ts"
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.spec.ts"
     },
     {
-      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.ts",
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.ts",
       "SourceId": "Dashboard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
       "BasePath": "_content/Dashboard",
-      "RelativePath": "src/app/modules/orders/components/modal/orders-add.component.ts",
+      "RelativePath": "src/app/modules/orders/components/modal/orders-detail.component.ts",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7443,7 +7443,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-add.component.ts"
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\orders\\components\\modal\\orders-detail.component.ts"
     },
     {
       "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\orders\\components\\orders-filter\\orders-filter.component.html",
@@ -8584,6 +8584,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\app\\modules\\shared\\shared.module.ts"
+    },
+    {
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\shared\\utils\\date\\date.service.spec.ts",
+      "SourceId": "Dashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
+      "BasePath": "_content/Dashboard",
+      "RelativePath": "src/app/modules/shared/utils/date/date.service.spec.ts",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\shared\\utils\\date\\date.service.spec.ts"
+    },
+    {
+      "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\shared\\utils\\date\\date.service.ts",
+      "SourceId": "Dashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\",
+      "BasePath": "_content/Dashboard",
+      "RelativePath": "src/app/modules/shared/utils/date/date.service.ts",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\app\\modules\\shared\\utils\\date\\date.service.ts"
     },
     {
       "Identity": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\widgets-examples\\charts\\charts.component.html",

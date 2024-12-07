@@ -1,25 +1,19 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { maxImagesValidator } from '../../../../shared/validators/image-validators';
-import { AppState } from '../../../../store';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Store } from '@ngrx/store';
-import { selectProductById } from '../../../../store/product/product.selectors';
 import {
-  IProduct,
-  IProductResponseItem,
-} from '../../../../shared/models/product.model';
-import {
-  addProduct,
-  updateProduct,
-} from '../../../../store/product/product.actions';
-import { ProductsService } from 'src/app/shared/services/products/products.service';
-import {
-
   IGalleryResponseItem,
   IGalleryUpdateDto,
 } from 'src/app/shared/models/gallery-image.model';
 import { GalleriesService } from 'src/app/shared/services/galleries/galleries.service';
+import { ProductsService } from 'src/app/shared/services/products/products.service';
+import {
+  IProduct,
+  IProductResponseItem,
+} from '../../../../shared/models/product.model';
+import { maxImagesValidator } from '../../../../shared/validators/image-validators';
+import { AppState } from '../../../../store';
 
 @Component({
   selector: 'app-product-add',

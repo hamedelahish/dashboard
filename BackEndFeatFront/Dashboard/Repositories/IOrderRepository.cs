@@ -8,6 +8,7 @@ namespace Dashboard.Repositories
         Task<PagedResult<OrderDto>> GetOrders(OrderQueryParameters queryParam);
         Task<OrderDetailsDto> GetOrderDetails(int orderId);
         Task<bool> UpdateOrderStatus(int orderId, int statusId);
+        Task<IEnumerable<OrderStatus>> GetOrderStatuses();
     }
 
 }

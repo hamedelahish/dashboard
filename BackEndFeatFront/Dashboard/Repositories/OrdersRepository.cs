@@ -5,6 +5,7 @@ using Dashboard.Models;
 using Dashboard.Services;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Data.Common;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Dashboard.Repositories
@@ -16,6 +17,17 @@ namespace Dashboard.Repositories
         public OrdersRepository(DapperContext context)
         {
             _context = context;
+        }
+
+
+        public async Task<IEnumerable<OrderStatus>> GetOrderStatuses()
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GetOrderStatuses";
+                return await connection.QueryAsync<OrderStatus>(query, commandType: CommandType.StoredProcedure);
+            }
+            
         }
 
 

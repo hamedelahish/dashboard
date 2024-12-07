@@ -11,7 +11,7 @@ import {
 import { IOrderResponseItem } from 'src/app/shared/models/order.model';
 import { OrdersService } from 'src/app/shared/services/orders/orders.service';
 import { AppState } from '../../../../store';
-import { OrdersAddComponent } from '../modal/orders-add.component';
+import { OrdersDetailComponent } from '../modal/orders-detail.component';
 import { DateService } from 'src/app/modules/shared/utils/date/date.service';
 
 @Component({
@@ -48,12 +48,12 @@ export class OrdersListComponent {
         }),
       ...(searchParams?.startDate &&
         searchParams.startDate !== '' && {
-          startDate: searchParams.startDate,
+          startDate: this.dateService.ConvertToGregorianDate(searchParams.startDate),
         }),
       ...(searchParams?.endDate &&
-        searchParams.endDate !== '' && { priceFrom: searchParams.endDate }),
+        searchParams.endDate !== '' && { endDate: this.dateService.ConvertToGregorianDate(searchParams.endDate) }),
       ...(searchParams?.statusName &&
-        searchParams.statusName !== '' && { priceTo: searchParams.statusName }),
+        searchParams.statusName !== '' && { statusName: searchParams.statusName }),
       pageNumber: this.pagination.currentPage.toString(),
       pageSize: this.pagination.pageSize.toString(),
     };
@@ -83,8 +83,8 @@ export class OrdersListComponent {
     this.loadOrders();
   }
 
-  showModalAddProduct() {
-    const addModalRef = this.modalService.open(OrdersAddComponent, {
+  showModalOrderDetail() {
+    const addModalRef = this.modalService.open(OrdersDetailComponent, {
       size: 'lg',
       centered: true,
     });
