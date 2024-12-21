@@ -17,18 +17,22 @@ namespace Dashboard.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<OrderStatus> OrderStatuses { get; set; }
         public DbSet<Order> Orders { get; set; }
-
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            
             modelBuilder.Entity<Customer>(ConfigureCustomer);
             modelBuilder.Entity<OrderStatus>(ConfigureOrderStatus);
             modelBuilder.Entity<Order>(ConfigureOrder);
             modelBuilder.Entity<Product>(ConfigureProduct);
             modelBuilder.Entity<OrderDetail>(ConfigureOrderDetail);
+            modelBuilder.Entity<UserRole>(ConfigureUserRoles);
 
             //modelBuilder.Entity<Product>()
             //    .HasOne(p => p.Category)
@@ -41,6 +45,11 @@ namespace Dashboard.Data
         private void ConfigureCustomer(EntityTypeBuilder<Customer> builder)
         {
             builder.HasKey(c => c.CustomerId);
+            builder
+                  .HasOne(c => c.User)
+                  .WithOne()         
+                  .HasForeignKey<Customer>(c => c.UserId); 
+
         }
 
         private void ConfigureOrderStatus(EntityTypeBuilder<OrderStatus> builder)
@@ -71,6 +80,24 @@ namespace Dashboard.Data
             builder.HasOne(od => od.Order).WithMany().HasForeignKey(od => od.OrderId).OnDelete(DeleteBehavior.Cascade);
             builder.HasOne(od => od.Product).WithMany().HasForeignKey(od => od.ProductId).OnDelete(DeleteBehavior.Cascade);
         }
+
+        private void ConfigureUserRoles(EntityTypeBuilder<UserRole> builder)
+        {
+
+            builder.HasKey(ur => new { ur.UserId, ur.RoleId });
+
+            builder
+                 .HasOne(ur => ur.User)
+                .WithMany(u => u.UserRoles)
+                .HasForeignKey(ur => ur.UserId);
+
+            builder
+                .HasOne(ur => ur.Role)
+                .WithMany(r => r.UserRoles)
+                .HasForeignKey(ur => ur.RoleId);
+        }
+
+
     }
 
 }

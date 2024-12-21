@@ -1,5 +1,6 @@
 import { IOrderResponseItem } from "./order.model";
 import { IProduct, IProductResponseItem } from "./product.model";
+import { IUserResponseItem } from "./user.model";
 
 export interface NzTreeNode {
   title: string;
@@ -15,6 +16,13 @@ export interface IPagination {
 
 export interface IProductResponse {
   items: IProductResponseItem[];
+  pageNumber: number;
+  pageSize: number;
+  total: number;
+}
+
+export interface IUsersResponse {
+  items: IUserResponseItem[];
   pageNumber: number;
   pageSize: number;
   total: number;
@@ -45,7 +53,9 @@ export interface ISearchParams {
   pageSize: string;
 }
 
-
+export interface ISearchUserParams {
+  searchText?: string;
+}
 export interface ISearchOrderParams {
   startDate?: string;
   endDate?: string;

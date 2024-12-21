@@ -327,3 +327,7 @@ C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\refint\Dashboa
 C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\Dashboard.pdb
 C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\Dashboard.genruntimeconfig.cache
 C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\ref\Dashboard.dll
+C:\Projects\dashboard\BackEndFeatFront\Dashboard\bin\Debug\net8.0\Dashboard.staticwebassets.endpoints.json
+C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\staticwebassets\msbuild.Dashboard.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Projects\dashboard\BackEndFeatFront\Dashboard\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

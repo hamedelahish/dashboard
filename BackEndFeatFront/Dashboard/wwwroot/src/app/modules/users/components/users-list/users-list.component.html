@@ -1,0 +1,13 @@
+<app-users-filter
+  (showModalAddUser)="showModalAddUser()"
+  (onReload)="onReload()"
+  (search)="onSearch($event)"
+></app-users-filter>
+<app-users-table
+  (onReload)="onReload()"
+  [users]="(users$ | async) ?? []"
+  [pagination]="pagination"
+  (onPageChange)="onPageChange($event)"
+  (onDeleteUser)="onDeleteUser($event)"
+
+></app-users-table>

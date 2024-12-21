@@ -1,0 +1,37 @@
+<div class="card mb-10">
+  <div class="card-body  ">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+      <div class="row justify-content-between mb-3">
+
+        <div class="col-md-5 order-2 order-md-1">
+          <div class="d-flex align-items-center gap-2">
+            <label class="col-form-label fw-bold fs-6">جستجو</label>
+            <div class="d-flex align-items-center position-relative me-4">
+              <span [inlineSVG]="'./assets/media/icons/duotune/general/gen021.svg'"
+                    class="svg-icon svg-icon-3 position-absolute ms-3"></span>
+              <input
+                formControlName="searchText"
+                type="text"
+                id="kt_filter_search"
+                class="form-control form-control-white form-control-sm w-200px ps-9"
+                placeholder="نام و نام خانوادگی کاربر"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7 order-1 order-md-2 mb-5">
+          <div class="d-flex align-items-start justify-content-end gap-4">
+            <button type="submit" class="btn btn-sm btn-primary cursor-pointer" id="kt_button_search">جستجو</button>
+            <a (click)="onShowModalAddProduct()" class="btn btn-sm btn-primary cursor-pointer" id="kt_toolbar_primary_button">افزودن کاربر</a>
+          
+           
+          </div>
+        </div>
+
+      </div>
+
+   
+    </form>
+  </div>
+</div>

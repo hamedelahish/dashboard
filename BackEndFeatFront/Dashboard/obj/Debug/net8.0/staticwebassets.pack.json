@@ -1813,6 +1813,74 @@
       "PackagePath": "staticwebassets\\src\\app\\modules\\shared\\utils\\date\\date.service.ts"
     },
     {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-add\\users-add.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\modal\\users-edit-password\\users-edit-password.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-filter\\user-filter.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-filter\\user-filter.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-filter\\users-filter.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-filter\\users-filter.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-filter\\users-filter.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-filter\\users-filter.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-list\\users-list.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-list\\users-list.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-list\\users-list.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-list\\users-list.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-list\\users-list.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-list\\users-list.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-table\\users-table.component.html",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-table\\users-table.component.html"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-table\\users-table.component.scss",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-table\\users-table.component.scss"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\components\\users-table\\users-table.component.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\components\\users-table\\users-table.component.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\users-routing.module.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\users-routing.module.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\users\\users.module.ts",
+      "PackagePath": "staticwebassets\\src\\app\\modules\\users\\users.module.ts"
+    },
+    {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\modules\\widgets-examples\\charts\\charts.component.html",
       "PackagePath": "staticwebassets\\src\\app\\modules\\widgets-examples\\charts\\charts.component.html"
     },
@@ -2021,6 +2089,10 @@
       "PackagePath": "staticwebassets\\src\\app\\shared\\models\\product.model.ts"
     },
     {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\models\\user.model.ts",
+      "PackagePath": "staticwebassets\\src\\app\\shared\\models\\user.model.ts"
+    },
+    {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\categories\\categories.service.spec.ts",
       "PackagePath": "staticwebassets\\src\\app\\shared\\services\\categories\\categories.service.spec.ts"
     },
@@ -2051,6 +2123,10 @@
     {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\products\\products.service.ts",
       "PackagePath": "staticwebassets\\src\\app\\shared\\services\\products\\products.service.ts"
+    },
+    {
+      "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\services\\users\\users.service.ts",
+      "PackagePath": "staticwebassets\\src\\app\\shared\\services\\users\\users.service.ts"
     },
     {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\src\\app\\shared\\utils\\flatten-categories.ts",
@@ -4655,6 +4731,10 @@
     {
       "Id": "C:\\Projects\\dashboard\\BackEndFeatFront\\Dashboard\\wwwroot\\tsconfig.spec.json",
       "PackagePath": "staticwebassets\\tsconfig.spec.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Dashboard.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Dashboard.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -22,6 +22,11 @@ const Routing: Routes = [
       import('../modules/orders/orders.module').then((m) => m.OrdersModule),
   },
   {
+    path: 'users/list',
+    loadChildren: () =>
+      import('../modules/users/users.module').then((m) => m.UsersModule),
+  },
+  {
     path: 'builder',
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),

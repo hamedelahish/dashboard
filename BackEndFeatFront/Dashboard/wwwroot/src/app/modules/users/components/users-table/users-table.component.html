@@ -1,0 +1,52 @@
+<div class="card mb-10">
+  <div class="card-body">
+    <div class="card-body py-3">
+      <div class="table-responsive">
+        <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+          <thead>
+          <tr class="fw-bolder text-muted">
+            <!-- <th class="w-25px">
+              <div class="form-check form-check-sm form-check-custom form-check-solid">
+                <input class="form-check-input" type="checkbox" (change)="toggleAllSelection($event)" />
+              </div>
+            </th> -->
+            <th class="min-w-20px text-center">#</th>
+            <th class="min-w-auto text-center"> شماره کاربر</th>
+            <th class="min-w-200px text-center">نام و نام خاتوادگی</th>
+            <th class="min-w-200px text-center">نام کاربری</th>
+            <th class="min-w-120px text-center">شماره همراه</th>
+            <th class="min-w-120px text-center">تاریخ سفارش</th>
+            <th class="min-w-100px text-center">عملیات</th>
+          </tr>
+          </thead>
+          <tbody>
+          <ng-container *ngIf="users">
+            <tr *ngFor="let user of users;let i=index">
+           
+              <td class="text-center"><span>{{ (pagination.currentPage - 1) * pagination.pageSize + i + 1 }}</span></td>
+              <td class="text-center"><span class="text-dark fw-bolder text-muted d-block fs-7">{{ user.userId }}</span></td>
+              <td class="text-center"><span class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">{{ user.fullName }}</span></td>
+              <td class="text-center"><span class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">{{ user.username }}</span></td>
+              <td class="text-center"><span class="text-muted fw-bold text-muted d-block fs-7">{{ user.phone }}</span></td>
+              <td class="text-dark fw-bolder text-center text-hover-primary fs-6">{{  convertToPersianDate(user.createDate) }}</td>
+              <td class="text-center">
+                <a   (click)="openModalEdit(user)" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                  <span [inlineSVG]="'./assets/media/icons/duotune/general/gen005.svg'" class="svg-icon svg-icon-3"></span>
+                </a>
+                    <a (click)="openModalEditPassword(user)" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+                      <span [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'" class="svg-icon svg-icon-3"></span>
+                    </a>
+                <a (click)="onDelete(user.userId)" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                  <span [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'" class="svg-icon svg-icon-3"></span>
+                </a>
+              
+              </td>
+            </tr>
+          </ng-container>
+          </tbody>
+        </table>
+      </div>
+      <nz-pagination [nzPageIndex]="pagination.currentPage" [nzTotal]="pagination.totalItems" [nzPageSize]="pagination.pageSize" (nzPageIndexChange)="onPageChanged($event)"></nz-pagination>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,8 @@ namespace Dashboard.Models
     {
         public int CustomerId { get; set; }
 
+        public int UserId { get; set; }
+
         [Required]
         [MaxLength(100)]
         public string FullName { get; set; }
@@ -21,5 +23,7 @@ namespace Dashboard.Models
         public bool IsDeleted { get; set; }
         public DateTime CreateDate { get; set; } = DateTime.Now;
         public DateTime UpdateDate { get; set; } = DateTime.Now;
+
+        public User User { get; set; }
     }
 }
